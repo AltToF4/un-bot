@@ -1,0 +1,101 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "!help",
+              "value": "Shows this menu",
+              "inline": "true"
+            },
+            {
+              "name": "!info",
+              "value": "Shows some info",
+              "inline": "true"
+            },
+            {
+              "name": "!communism",
+              "value": "Liberty Prime",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FFF57",
+          "title": "Help Menu",
+          "url": "",
+          "authorname": "[UN] Bot",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Commands",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "show info",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.DefaultChannel.id}",
+          "messagetext": "Command Author: ${dbsVars.CommandAuthor.displayName}\nTagged author: <@${dbsVars.CommandAuthor.id}>\nYou can insert more values by clicking the \"Insert Variable\" button next to this field!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "start",
+      "perms": [
+        "founder",
+        "bot"
+      ],
+      "actions": [
+        {
+          "name": "bot status",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "Unearthed Networks",
+          "activitytype": "PLAYING",
+          "streamurl": ""
+        }
+      ]
+    },
+    {
+      "name": "communism",
+      "perms": [],
+      "actions": [
+        {
+          "name": "liberty",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "4766FF",
+          "title": "",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Liberty Prime is online. All systems nominal. Weapons hot. Mission: the destruction of any and all Chinese communists.\n\nVoice module online. Audio functionality test initialized. Designation: Liberty Prime. Mission: the liberation of Anchorage, Alaska\n\nObstruction detected, composition: titanium alloy supplemented by photonic resonance barrier. Probability of mission hindrance: zero percent!\n\nChairman Cheng will fail. China will fall\n\nRevised stratagem: Initiate photonic resonance overcharge.\n\nCommunist threat assessment: Minimal. Scanning defenses...\n\nStructural weakness detected. Exploiting\n\nSatellite Uplink detected. Analysis of Communist transmission pending.\n\nWarning! Warning! Red Chinese Orbital Strike Imminent! All personnel should reach minimum safe distance immediately!\n\nRepeat: Red Chinese orbital strike inbound! All U.S. Army personnel must vacate the area immediately! Protection protocols engaged!",
+          "thumbnail": "https://pm1.narvii.com/6197/37f81509a6a3867c05710a596688ee1f877da310_00.jpg",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}

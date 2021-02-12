@@ -1,0 +1,79 @@
+{
+  "command": [
+    {
+      "name": "User Joins Server",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Welcome Message",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "779380747801853962",
+          "messagetext": "Welcome <@${tempVars.newuser.id}> to Unearthed Networks, make sure to read the rules.",
+          "savetovariable": "",
+          "savetovariabletype": "server"
+        },
+        {
+          "name": "Member Role",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "${tempVars.newuser.id}",
+          "rolename": "Member"
+        }
+      ],
+      "var": {
+        "user": "newuser"
+      }
+    },
+    {
+      "name": "Any Message",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "msguser"
+      }
+    },
+    {
+      "name": "User Kicked",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Kick Message",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "779380747801853962",
+          "messagetext": "${tempVars.kickuser.user.tag} was kicked",
+          "savetovariable": "",
+          "savetovariabletype": "server"
+        }
+      ],
+      "var": {
+        "user": "kickuser"
+      }
+    },
+    {
+      "name": "User Banned",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Ban Message",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "779380747801853962",
+          "messagetext": "${tempVars.banuser.user.tag} was banned",
+          "savetovariable": "",
+          "savetovariabletype": "server"
+        }
+      ],
+      "var": {
+        "user": "banuser"
+      }
+    },
+    {
+      "name": "Bot Initialization",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    }
+  ]
+}
